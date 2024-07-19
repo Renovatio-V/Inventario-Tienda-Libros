@@ -37,6 +37,10 @@ Tienda de Libros es una aplicación de gestión de inventario de libros desarrol
 5. Ejecuta la aplicación:
   ```bash
   java -jar target/tu_proyecto-1.0.0.jar
+  ```
+## Visuals
+![image](https://github.com/user-attachments/assets/2dae852f-b424-4d23-b110-aea9bb4f3328)
+
 
 
 
