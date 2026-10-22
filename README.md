@@ -1,15 +1,45 @@
-Tienda de LibrosDescripciónTienda de Libros es una aplicación enterprise de gestión de inventario desarrollada en Java. Combina la potencia del backend de Spring Boot (JPA) + MySQL con una interfaz gráfica moderna de Swing rediseñada bajo el concepto minimalista Obsidian Library Studio (Negro Obsidiana), orientada a ofrecer una experiencia visual limpia, rápida y profesional.Nuevas Funcionalidades y Mejoras Añadidas Interfaz Gráfica:Paleta cromática minimalista de alto contraste (#08080A y #111115) con acentos en Electric Indigo y Cyan.Vista Dual Interactiva: Permite alternar instantáneamente entre una Galería de Portadas (Cover Grid) estilo gestor moderno y una Vista de Tabla Minimalista.Barra de Telemetría Ejecutiva (KPIs en tiempo real): Muestra el catálogo activo (SKUs), total de unidades en bodega, valorización financiera total del inventario y alertas dinámicas de stock crítico ($\le 5$ unidades).Navegación Alfabética (A-Z): Filtro rápido por iniciales del título y buscador instantáneo reactivo.Sincronización y Descarga Automática de Portadas:Integración asíncrona con Google Books API y Open Library API para buscar y descargar la carátula oficial de cada obra a partir de su título y autor.Caché Local Persistente: Las portadas descargadas se almacenan automáticamente en la carpeta oculta C:\Users\tu_usuario/.tienda_libros_covers/ en la máquina local para cargar de forma instantánea en futuros arranques.Generador de Portadas Editoriales (Fallback): Si un libro no se encuentra en la web o se registra de manera personalizada, el motor gráfico renderiza una portada editorial minimalista única en alta definición.Autocompletado Inteligente Bidireccional:Sugerencias en tiempo real mientras escribes el título del libro, autocompletando automáticamente el autor oficial verificado y previsualizando la portada en el panel inspector.Botón de búsqueda dedicada (⚡ Buscar Autor) para asegurar la integridad de los metadatos y evitar registros erróneos.Protección Anti-Duplicados y Control de Edición:Validación estricta que impide registrar libros repetidos por título: si intentas agregar una obra existente, el sistema selecciona automáticamente el registro original y avisa al usuario para actualizar su stock en lugar de duplicarlo.Bloqueo dinámico de botones según el estado (Modo Registro vs Modo Edición).Tecnologías UtilizadasJava 22Spring Boot 3.3.1 (JPA / Hibernate)MySQL (Base de datos relacional)Swing & Java 2D (Renderizado gráfico personalizado sin librerías externas de diseño)Jackson & HttpClient (Consumo de APIs asíncronas para metadatos y portadas)MavenGalería Visual de AvancesVista General de la Aplicación Panel Inspector con Autocompletado y Portada SincronizadaInstalación y ConfiguraciónClona tu Fork del repositorio en tu máquina local:git clone https://github.com/tu_usuario/tu_repositorio.git
-Navega al directorio del proyecto.Configura la base de datos MySQL. Crea una base de datos llamada libros_db y actualiza el archivo src/main/resources/application.properties con tus credenciales:spring.datasource.url=jdbc:mysql://localhost:3306/libros_db?createDatabaseIfNotExist=true
-spring.datasource.username=tu_usuario
-spring.datasource.password=tu_contraseña
-spring.jpa.hibernate.ddl-auto=update
-Compila y empaqueta la aplicación usando Maven:mvn clean package
-Ejecuta la aplicación:java -jar target/Tienda_Libros-0.0.1-SNAPSHOT.jar
+# Tienda de Libros
 
+## Descripción
+Tienda de Libros es una aplicación de gestión de inventario de libros desarrollada en Java. Utiliza Swing para la capa de presentación, Spring Boot para el servicio, repositorio y entidad, y MySQL como base de datos. La aplicación permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una base de datos de libros.
+
+## Características
+- **Listar Libros**: Muestra una lista de todos los libros disponibles en la base de datos.
+- **Agregar Libro**: Permite añadir un nuevo libro a la base de datos.
+- **Modificar Libro**: Permite actualizar la información de un libro existente.
+- **Eliminar Libro**: Permite eliminar un libro de la base de datos.
+
+## Tecnologías Utilizadas
+- **Java 22**
+- **Spring Boot 3.3.1**
+- **MySQL**
+- **Swing**
+- **Maven**
+- **SpringBoot-Dependencies:** JPA, Lombok, MySQL
+
+## Instalación
+1. Clona el repositorio en tu máquina local:
+   ```bash
+   git clone https://github.com/tu_usuario/tu_repositorio.git
+
+2. Navega al directorio del proyecto.
+3. Configura la base de datos MySQL. Crea una base de datos llamada libros_db y actualiza el archivo application.properties con tus credenciales de MySQL:
+  ```bash
+  spring.datasource.url=jdbc:mysql://localhost:3306/libros_db
+  spring.datasource.username=tu_usuario
+  spring.datasource.password=tu_contraseña
+  spring.jpa.hibernate.ddl-auto=update
+  ```
+4. Compila y empaqueta la aplicación usando Maven:
+  ```bash
+  mvn clean package
+  ```
+5. Ejecuta la aplicación:
+  ```bash
+  java -jar target/tu_proyecto-1.0.0.jar
+  ```
 ## Visuals
-![image](https://github.com/user-attachments/assets/2dae852f-b424-4d23-b110-aea9bb4f3328) 
-
-delete
+![image](https://github.com/user-attachments/assets/2dae852f-b424-4d23-b110-aea9bb4f3328)
 
 
 
