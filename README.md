@@ -7,7 +7,9 @@ Compila y empaqueta la aplicación usando Maven:mvn clean package
 Ejecuta la aplicación:java -jar target/Tienda_Libros-0.0.1-SNAPSHOT.jar
 
 ## Visuals
-![image](https://github.com/user-attachments/assets/2dae852f-b424-4d23-b110-aea9bb4f3328)
+![image](https://github.com/user-attachments/assets/2dae852f-b424-4d23-b110-aea9bb4f3328) 
+
+delete
 
 
 
